@@ -3,6 +3,7 @@ import tkinter
 screen = tkinter.Tk()
 screen.title("BMI Calculator")
 screen.geometry("250x300")
+screen.iconbitmap("C:/Users/enis/PycharmProjects/BMICalculator/bmi.ico")
 
 height_label = tkinter.Label(text="Enter your height (cm)", font=("Arial Bold", 10, "bold"))
 height_label.pack(pady=(20, 0))
