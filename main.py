@@ -1,9 +1,18 @@
 import tkinter
+import sys
+import os
+
+def resource_path(relative_path):
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 screen = tkinter.Tk()
 screen.title("BMI Calculator")
 screen.geometry("250x300")
-screen.iconbitmap("C:/Users/enis/PycharmProjects/BMICalculator/bmi.ico")
+screen.iconbitmap(resource_path("bmi.ico"))
 
 height_label = tkinter.Label(text="Enter your height (cm)", font=("Arial Bold", 10, "bold"))
 height_label.pack(pady=(20, 0))
